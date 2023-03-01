@@ -1,0 +1,381 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Secondary Structure Prediction · NSP</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yiduo Xiong">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="tsp.html" />
+    
+    
+    <link rel="prev" href="3dRPC_web.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Web Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3dRNA_DNA_web.html">
+            
+                <a href="3dRNA_DNA_web.html">
+            
+                    
+                    3dRNA/DNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="DCA_web.html">
+            
+                <a href="DCA_web.html">
+            
+                    
+                    DCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="3dRPC_web.html">
+            
+                <a href="3dRPC_web.html">
+            
+                    
+                    3dRPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="ssp.html">
+            
+                <a href="ssp.html">
+            
+                    
+                    Secondary Structure Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tsp.html">
+            
+                <a href="tsp.html">
+            
+                    
+                    Tertiary Structure Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="DCA.html">
+            
+                <a href="DCA.html">
+            
+                    
+                    Direct Coupling Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Utilities.html">
+            
+                <a href="Utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Secondary Structure Prediction</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="secondary-structure-prediction">Secondary Structure Prediction</h1>
+<ul>
+<li><p>Free energy minimization method</p>
+<pre><code>  nsp ssp_fe -seq &lt;SEQUENCE&gt;
+</code></pre></li>
+<li><p>Combining free energy minimization method and DI value of the DCA prediction for secondary structure prediction</p>
+<pre><code>  nsp ssp_dca -seq &lt;SEQUENCE&gt; -di &lt;DI_FILE&gt; [-k &lt;K&gt;]
+</code></pre><p>  <em><code>&lt;K&gt;</code> value is used to set to read the first <code>K&#xB7;L</code> DI values. If <code>K=1</code>, on behalf of the read before <code>L</code>; if <code>K=0.5</code>, on behalf of the read before <code>L/2</code>.</em></p>
+</li>
+<li><p>Show secondary structure tree</p>
+<pre><code>  nsp ss_tree -seq &lt;SEQUENCE&gt; -ss &quot;&lt;SS&gt;&quot;
+</code></pre><p>  <em><code>&lt;SEQUENCE&gt;</code> is the sequence, <code>&lt;SS&gt;</code> is the secondary structure.</em></p>
+<p>  Example:</p>
+<pre><code>  nsp ss_tree -seq AAAACCCCUUUU -ss &quot;((((....))))&quot;
+</code></pre></li>
+<li><p>Calculate MCC</p>
+<pre><code>  nsp mcc &quot;&lt;SECONDARY_STRUCTURE_OF_NATIVE&gt;&quot; &quot;&lt;SECONDARY_STRUCTURE_OF_PREDICTION&gt;&quot;
+</code></pre></li>
+<li><p>Calculate STY</p>
+<pre><code>  nsp sty &quot;&lt;SECONDARY_STRUCTURE_OF_NATIVE&gt;&quot; &quot;&lt;SECONDARY_STRUCTURE_OF_PREDICTION&gt;&quot;
+</code></pre></li>
+<li><p>Calculate PPV</p>
+<pre><code>  nsp ppv &quot;&lt;SECONDARY_STRUCTURE_OF_NATIVE&gt;&quot; &quot;&lt;SECONDARY_STRUCTURE_OF_PREDICTION&gt;&quot;
+</code></pre></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="3dRPC_web.html" class="navigation navigation-prev " aria-label="Previous page: 3dRPC">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="tsp.html" class="navigation navigation-next " aria-label="Next page: Tertiary Structure Prediction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Secondary Structure Prediction","level":"1.4","depth":1,"next":{"title":"Tertiary Structure Prediction","level":"1.5","depth":1,"path":"tsp.md","ref":"tsp.md","articles":[]},"previous":{"title":"3dRPC","level":"1.3.3","depth":2,"path":"3dRPC_web.md","ref":"3dRPC_web.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"code":{"copyButtons":true},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yiduo Xiong","lang":"English","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NSP","gitbook":"*","description":"NSP (Nucleic acids Structure Prediction project) is a software application developed by us, suitable for nucleic acid structure prediction."},"file":{"path":"ssp.md","mtime":"2023-02-26T13:20:11.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-01T06:43:54.517Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
