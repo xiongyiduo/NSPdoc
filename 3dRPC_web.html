@@ -1,0 +1,371 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>3dRPC · NSP</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Yiduo Xiong">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ssp.html" />
+    
+    
+    <link rel="prev" href="DCA_web.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    Web Server
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="3dRNA_DNA_web.html">
+            
+                <a href="3dRNA_DNA_web.html">
+            
+                    
+                    3dRNA/DNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="DCA_web.html">
+            
+                <a href="DCA_web.html">
+            
+                    
+                    DCA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="3dRPC_web.html">
+            
+                <a href="3dRPC_web.html">
+            
+                    
+                    3dRPC
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ssp.html">
+            
+                <a href="ssp.html">
+            
+                    
+                    Secondary Structure Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="tsp.html">
+            
+                <a href="tsp.html">
+            
+                    
+                    Tertiary Structure Prediction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="DCA.html">
+            
+                <a href="DCA.html">
+            
+                    
+                    Direct Coupling Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="Utilities.html">
+            
+                <a href="Utilities.html">
+            
+                    
+                    Utilities
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >3dRPC</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="3drpc">3dRPC</h1>
+<p><a herf="http://biophy.hust.edu.cn/new/3dRPC">Click here to visit 3dRPC web server</a></p>
+<p>3dRPC is an automatic program of building three-dimensional RNA-protein complex structures by docking RNA and protein structure.</p>
+<p>The input of the 3dRPC server is the structure of protein and RNA in PDB format:</p>
+<pre><code>ATOM 84706 N  MET V 1 -134.594 111.719 180.266
+ATOM 84707 CA MET V 1 -134.339 111.991 178.856
+ATOM 84708 C  MET V 1 -133.342 113.135 178.673
+ATOM 84709 O  MET V 1 -133.677 114.186 178.125
+ATOM 84710 CB MET V 1 -135.647 112.297 178.123
+ATOM 84711 CG MET V 1 -135.482 112.480 176.627
+ATOM 84712 SD MET V 1 -134.220 111.380 175.959
+ATOM 84713 CE MET V 1 -134.680 109.827 176.724
+</code></pre><p>You can upload the structures by clicking the corresponding buttons. Then, you can input the number of predictions. The 3dRPC server can generate corresponding number of complexes. Finally, submit your job by clicking the &quot;Submit&quot; button. Once a job is submitted to the 3dRPC server, a web page is displayed to show the rate of progress and the predicted result if the job is finished. You can download the predicted complex structures in PDB format.</p>
+<div>
+    <img src="img/3dRPC.png" style="height:664px; width:auto;">
+</div>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="DCA_web.html" class="navigation navigation-prev " aria-label="Previous page: DCA">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ssp.html" class="navigation navigation-next " aria-label="Next page: Secondary Structure Prediction">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"3dRPC","level":"1.3.3","depth":2,"next":{"title":"Secondary Structure Prediction","level":"1.4","depth":1,"path":"ssp.md","ref":"ssp.md","articles":[]},"previous":{"title":"DCA","level":"1.3.2","depth":2,"path":"DCA_web.md","ref":"DCA_web.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","search-pro","code","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"code":{"copyButtons":true},"livereload":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Yiduo Xiong","lang":"English","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"NSP","gitbook":"*","description":"NSP (Nucleic acids Structure Prediction project) is a software application developed by us, suitable for nucleic acid structure prediction."},"file":{"path":"3dRPC_web.md","mtime":"2023-02-28T02:56:27.901Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-01T06:43:54.517Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
